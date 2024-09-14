@@ -1,0 +1,36 @@
+{
+  "criteria": {
+    "transformed_pig": {
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "minecraft:pig"
+            }
+          }
+        ],
+        "item": {
+          "items": "pigs-might-fly:potion_of_pig_flight"
+        }
+      },
+      "trigger": "minecraft:player_interacted_with_entity"
+    }
+  },
+  "display": {
+    "background": "minecraft:textures/gui/advancements/backgrounds/adventure.png",
+    "description": "Transform a pig into a flying pig with a Potion of Pig Flight.",
+    "icon": {
+      "count": 1,
+      "id": "pigs-might-fly:potion_of_pig_flight"
+    },
+    "title": "When pigs fly!"
+  },
+  "requirements": [
+    [
+      "transformed_pig"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

@@ -1,0 +1,43 @@
+{
+	"schemaVersion": 1,
+	"id": "pigs-might-fly",
+	"version": "${version}",
+	"name": "Pigs Might Fly",
+	"description": "Flying pigs!",
+	"authors": [
+		"Commander07"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/commander07/pigs-might-fly"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/pigs-might-fly/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"fabric-datagen": [
+			"commander.pigsmightfly.DataGenerator"
+		],
+		"main": [
+			"commander.pigsmightfly.PigsMightFly"
+		],
+		"client": [
+			"commander.pigsmightfly.PigsMightFlyClient"
+		]
+	},
+	"mixins": [
+		"pigs-might-fly.mixins.json",
+		{
+			"config": "pigs-might-fly.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.16.5",
+		"minecraft": "~1.21.1",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+	}
+}
